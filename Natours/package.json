@@ -4,7 +4,8 @@
   "description": "Natours Application Css",
   "main": "index.js",
   "scripts": {
-    "compile:sass" : "node-sass sass/main.scss css/style.css -w"
+    "compile:sass" : "node-sass sass/main.scss css/style.css -w",
+    "compile:codepen" : "node-sass Codepen/style.scss Codepen/style.css -w"
   },
   "author": "",
   "license": "ISC",

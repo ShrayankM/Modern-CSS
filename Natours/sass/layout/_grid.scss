@@ -1,14 +1,14 @@
 .row {
     max-width: $width-grid;
     margin: 0 auto;
-    background-color: #eee;
+    // background-color: #eee;
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
     }
 
     [class^="col-"] {
-        background-color: orangered;
+        // background-color: orangered;
         float: left;
 
         &:not(:last-child) {

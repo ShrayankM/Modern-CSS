@@ -3,16 +3,25 @@
     box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
     background-color: rgba($color-white, 0.5);
     margin: 0 auto;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
     padding: 6rem;
     padding-left: 9rem;
     font-size: $default-font-size;
     transform: skewX(-15deg);
 
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0deg);
+    }
+
     &:not(:last-child) {
         margin-bottom: 10rem;
     }
-
 
     &__shape {
         width: 15rem;
@@ -25,6 +34,10 @@
 
         clip-path: circle(50% at 50% 50%);
         transform: translate(-3rem) skewX(15deg);
+
+        @include respond(phone) {
+            transform: translate(-3rem) skewX(0deg);
+        }
     }
 
     &__img {
@@ -32,10 +45,18 @@
         transform: translateX(-4rem) scale(1.4);
         transition: all 0.5s;
         backface-visibility: hidden;
+
+        @include respond(tab-port) {
+            // backface-visibility: visible;
+        }
     }
 
     &__text {
         transform: skewX(15deg);
+
+        @include respond(phone) {
+            transform: skewX(0deg);
+        }
     }
 
     &__caption {
@@ -47,7 +68,7 @@
         transform: translate(-50%, 20%);
         font-size: 1.7rem;
         text-align: center;
-        transition: all .5s;
+        transition: all 0.5s;
         opacity: 0;
     }
 
@@ -58,7 +79,8 @@
 
     &:hover &__img {
         height: 100%;
-        filter: blur(.4rem) brightness(80%);
+        filter: blur(0.4rem) brightness(80%);
         transform: translateX(-4rem) scale(1);
+        // backface-visibility: hidden;
     }
 }
